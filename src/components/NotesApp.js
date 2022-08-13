@@ -1,5 +1,5 @@
 import React from "react";
-import { getInitialData, showFormattedDate } from "../utils/data";
+import { getInitialData } from "../utils/data";
 import NotesInput from "./NotesInput";
 import NotesHeader from "./NotesHeader";
 import AllNotesList from "./AllNotesList";
@@ -44,8 +44,22 @@ class NotesApp extends React.Component {
             id: +new Date(),
             title,
             body,
+            createdAt: +new Date(),
             archived: false,
-            createdAt: showFormattedDate(),
+          },
+        ],
+      };
+    });
+    this.setState((prevState) => {
+      return {
+        notesBackup: [
+          ...prevState.notes,
+          {
+            id: +new Date(),
+            title,
+            body,
+            createdAt: +new Date(),
+            archived: false,
           },
         ],
       };

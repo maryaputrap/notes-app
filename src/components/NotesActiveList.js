@@ -1,6 +1,6 @@
 import React from "react";
-import NotesItem from "./NotesItem";
 import { showFormattedDate } from "../utils/data";
+import NotesActiveItem from "./NotesActiveItem";
 
 function NotesActiveList({ notes, onDelete, onArchive }) {
   const list = notes.filter((note) => note.archived === false);
@@ -17,7 +17,7 @@ function NotesActiveList({ notes, onDelete, onArchive }) {
       <div className="notes-draft">
         <div className="notes-list">
           {list.map((note) => (
-            <NotesItem
+            <NotesActiveItem
               id={note.id}
               title={note.title}
               body={note.body}

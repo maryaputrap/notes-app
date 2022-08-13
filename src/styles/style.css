@@ -153,7 +153,8 @@ textarea::placeholder {
 }
 
 .notes-item__delete-button,
-.notes-item__archive-button {
+.notes-item__archive-button,
+.notes-item__unarchive-button {
   display: block;
   width: 100%;
   background-color: transparent;
@@ -174,6 +175,14 @@ textarea::placeholder {
   color: #fff263;
 }
 
+.notes-item__unarchive-button {
+  color: #01fe01;
+}
+
+.notes-item__unarchive-button:hover {
+  color: #25bf25;
+}
+
 .notes-item__archive-button:hover {
   color: #c49000;
 }
@@ -191,10 +200,6 @@ textarea::placeholder {
 @media only screen and (min-width: 800px) {
   .notes-list {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .note-search input {
-    min-width: 400px;
   }
 }
 

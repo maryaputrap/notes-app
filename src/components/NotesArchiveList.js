@@ -1,5 +1,5 @@
 import React from "react";
-import NotesItem from "./NotesItem";
+import NotesArchiveItem from "./NotesArchiveItem";
 import { showFormattedDate } from "../utils/data";
 
 function NotesArchiveList({ notes, onDelete, onArchive }) {
@@ -17,7 +17,7 @@ function NotesArchiveList({ notes, onDelete, onArchive }) {
       <div className="notes-draft">
         <div className="notes-list">
           {list.map((note) => (
-            <NotesItem
+            <NotesArchiveItem
               id={note.id}
               title={note.title}
               body={note.body}

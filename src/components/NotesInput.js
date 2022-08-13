@@ -54,7 +54,7 @@ class NotesInput extends React.Component {
           value={this.state.title}
           onChange={this.onTitleChangeEventHandler}
         />
-        <input
+        <textarea
           type="text"
           className="notes-input__body"
           placeholder="Write your note here.."
