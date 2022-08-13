@@ -9,6 +9,7 @@ class NotesApp extends React.Component {
     super(props);
     this.state = {
       notes: getInitialData(),
+      notesBackup: getInitialData(),
     };
 
     this.onSearchHandler = this.onSearchHandler.bind(this);
@@ -18,6 +19,12 @@ class NotesApp extends React.Component {
   }
 
   onSearchHandler(title) {
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        notes: this.state.notesBackup,
+      };
+    });
     this.setState((prevState) => {
       return {
         ...prevState,
